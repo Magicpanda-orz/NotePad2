@@ -45,6 +45,8 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -156,6 +158,14 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
                 NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
                 NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE);
 
+        sNotesProjectionMap.put(
+                NotePad.Notes.COLUMN_NAME_BACK_COLOR,
+                NotePad.Notes.COLUMN_NAME_BACK_COLOR);
+
+//        sNotesProjectionMap.put(
+//                NotePad.Notes.COLUMN_NAME_TEXT_COLOR,
+//                NotePad.Notes.COLUMN_NAME_TEXT_COLOR);
+
         /*
          * Creates an initializes a projection map for handling Live Folders
          */
@@ -196,7 +206,10 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
                    + NotePad.Notes.COLUMN_NAME_TITLE + " TEXT,"
                    + NotePad.Notes.COLUMN_NAME_NOTE + " TEXT,"
                    + NotePad.Notes.COLUMN_NAME_CREATE_DATE + " INTEGER,"
-                   + NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE + " INTEGER"
+                   + NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE + " INTEGER,"
+                   + NotePad.Notes.COLUMN_NAME_BACK_COLOR + " INTEGER" //颜色
+                   //+ NotePad.Notes.COLUMN_NAME_TEXT_COLOR + " INTEGER" //新增加的修改字体颜色
+                   //+ NotePad.Notes.COLUMN_NAME_TEXT_SIZE + " INTEGER" //新增加的修改字体大小
                    + ");");
        }
 
@@ -517,16 +530,19 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
 
         // Gets the current system time in milliseconds
         Long now = Long.valueOf(System.currentTimeMillis());
+        Date date = new Date(now);
+        SimpleDateFormat format = new SimpleDateFormat("yy.MM.dd HH:mm:ss");
+        String dateTime = format.format(date);
 
         // If the values map doesn't contain the creation date, sets the value to the current time.
         if (values.containsKey(NotePad.Notes.COLUMN_NAME_CREATE_DATE) == false) {
-            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, now);
+            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, dateTime);
         }
 
         // If the values map doesn't contain the modification date, sets the value to the current
         // time.
         if (values.containsKey(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE) == false) {
-            values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, now);
+            values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, dateTime);
         }
 
         // If the values map doesn't contain a title, sets the value to the default title.
@@ -539,6 +555,16 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
         if (values.containsKey(NotePad.Notes.COLUMN_NAME_NOTE) == false) {
             values.put(NotePad.Notes.COLUMN_NAME_NOTE, "");
         }
+
+        // 新建笔记，背景默认为白色
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_BACK_COLOR) == false) {
+            values.put(NotePad.Notes.COLUMN_NAME_BACK_COLOR, NotePad.Notes.DEFAULT_COLOR);
+        }
+
+        // 新建笔记，字体默认为黑色
+//        if (values.containsKey(NotePad.Notes.COLUMN_NAME_TEXT_COLOR) == false) {
+//            values.put(NotePad.Notes.COLUMN_NAME_TEXT_COLOR, NotePad.Notes.DEFAULT_FONT);
+//        }
 
         // Opens the database object in "write" mode.
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
@@ -571,7 +597,7 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
      * {@link android.content.ContentResolver#delete(Uri, String, String[])}.
      * Deletes records from the database. If the incoming URI matches the note ID URI pattern,
      * this method deletes the one record specified by the ID in the URI. Otherwise, it deletes a
-     * a set of records. The record or records must also match the input selection criteria
+     * a set of records. The record or records must also match the inputput selection criteria
      * specified by where and whereArgs.
      *
      * If rows were deleted, then listeners are notified of the change.

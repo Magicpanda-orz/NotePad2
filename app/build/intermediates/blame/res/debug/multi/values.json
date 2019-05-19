@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\gitrepos\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "outputFile": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,14 +11,7 @@
                     "endOffset": 95
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 691,
-                        "endColumn": 44,
-                        "endOffset": 731
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
@@ -26,360 +19,562 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 100,
-                    "endColumn": 40,
-                    "endOffset": 136
+                    "endColumn": 43,
+                    "endOffset": 139
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 4,
-                        "startOffset": 1320,
-                        "endColumn": 40,
-                        "endOffset": 1356
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 141,
-                    "endColumn": 60,
-                    "endOffset": 197
+                    "startOffset": 144,
+                    "endColumn": 44,
+                    "endOffset": 184
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 4,
-                        "startOffset": 1559,
-                        "endColumn": 60,
-                        "endOffset": 1615
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 202,
-                    "endColumn": 45,
-                    "endOffset": 243
+                    "startOffset": 189,
+                    "endColumn": 42,
+                    "endOffset": 227
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 1513,
-                        "endColumn": 45,
-                        "endOffset": 1554
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 248,
-                    "endColumn": 50,
-                    "endOffset": 294
+                    "startOffset": 232,
+                    "endColumn": 44,
+                    "endOffset": 272
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 736,
-                        "endColumn": 50,
-                        "endOffset": 782
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 299,
+                    "startOffset": 277,
                     "endColumn": 45,
-                    "endOffset": 340
+                    "endOffset": 318
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 997,
-                        "endColumn": 45,
-                        "endOffset": 1038
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 345,
-                    "endColumn": 42,
-                    "endOffset": 383
+                    "startOffset": 323,
+                    "endColumn": 38,
+                    "endOffset": 357
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 4,
-                        "startOffset": 1231,
-                        "endColumn": 42,
-                        "endOffset": 1269
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 388,
-                    "endColumn": 46,
-                    "endOffset": 430
+                    "startOffset": 362,
+                    "endColumn": 40,
+                    "endOffset": 398
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 4,
-                        "startOffset": 1086,
-                        "endColumn": 46,
-                        "endOffset": 1128
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 435,
-                    "endColumn": 42,
-                    "endOffset": 473
+                    "startOffset": 403,
+                    "endColumn": 44,
+                    "endOffset": 443
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 1133,
-                        "endColumn": 42,
-                        "endOffset": 1171
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 478,
-                    "endColumn": 44,
-                    "endOffset": 518
+                    "startOffset": 448,
+                    "endColumn": 40,
+                    "endOffset": 484
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 31,
-                        "startColumn": 4,
-                        "startOffset": 1274,
-                        "endColumn": 44,
-                        "endOffset": 1314
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 523,
-                    "endColumn": 54,
-                    "endOffset": 573
+                    "startOffset": 489,
+                    "endColumn": 60,
+                    "endOffset": 545
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 4,
-                        "startOffset": 1176,
-                        "endColumn": 54,
-                        "endOffset": 1226
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 578,
-                    "endColumn": 42,
-                    "endOffset": 616
+                    "startOffset": 550,
+                    "endColumn": 45,
+                    "endOffset": 591
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 4,
-                        "startOffset": 1043,
-                        "endColumn": 42,
-                        "endOffset": 1081
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 621,
-                    "endColumn": 68,
-                    "endOffset": 685
+                    "startOffset": 596,
+                    "endColumn": 41,
+                    "endOffset": 633
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 41,
-                        "startColumn": 4,
-                        "startOffset": 1620,
-                        "endColumn": 68,
-                        "endOffset": 1684
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 690,
-                    "endColumn": 50,
-                    "endOffset": 736
+                    "startOffset": 638,
+                    "endColumn": 41,
+                    "endOffset": 675
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 36,
-                        "startColumn": 4,
-                        "startOffset": 1408,
-                        "endColumn": 50,
-                        "endOffset": 1454
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 741,
-                    "endColumn": 52,
-                    "endOffset": 789
+                    "startOffset": 680,
+                    "endColumn": 41,
+                    "endOffset": 717
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 37,
-                        "startColumn": 4,
-                        "startOffset": 1459,
-                        "endColumn": 52,
-                        "endOffset": 1507
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 794,
-                    "endColumn": 45,
-                    "endOffset": 835
+                    "startOffset": 722,
+                    "endColumn": 49,
+                    "endOffset": 767
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 34,
-                        "startColumn": 4,
-                        "startOffset": 1361,
-                        "endColumn": 45,
-                        "endOffset": 1402
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 840,
-                    "endColumn": 49,
-                    "endOffset": 885
+                    "startOffset": 772,
+                    "endColumn": 47,
+                    "endOffset": 815
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 845,
-                        "endColumn": 49,
-                        "endOffset": 890
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 890,
-                    "endColumn": 49,
-                    "endOffset": 935
+                    "startOffset": 820,
+                    "endColumn": 47,
+                    "endOffset": 863
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 895,
-                        "endColumn": 49,
-                        "endOffset": 940
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 940,
-                    "endColumn": 56,
-                    "endOffset": 992
+                    "startOffset": 868,
+                    "endColumn": 45,
+                    "endOffset": 909
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 788,
-                        "endColumn": 56,
-                        "endOffset": 840
-                    }
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 997,
-                    "endColumn": 50,
-                    "endOffset": 1043
+                    "startOffset": 914,
+                    "endColumn": 43,
+                    "endOffset": 953
                 },
                 "from": {
-                    "file": "E:\\gitrepos\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 958,
+                    "endColumn": 50,
+                    "endOffset": 1004
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1009,
+                    "endColumn": 45,
+                    "endOffset": 1050
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1055,
+                    "endColumn": 49,
+                    "endOffset": 1100
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1105,
+                    "endColumn": 42,
+                    "endOffset": 1143
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1148,
+                    "endColumn": 42,
+                    "endOffset": 1186
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 23,
+                        "startLine": 27,
                         "startColumn": 4,
-                        "startOffset": 945,
-                        "endColumn": 50,
-                        "endOffset": 991
+                        "startOffset": 1113,
+                        "endColumn": 42,
+                        "endOffset": 1151
                     }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1191,
+                    "endColumn": 42,
+                    "endOffset": 1229
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1234,
+                    "endColumn": 44,
+                    "endOffset": 1274
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 2201,
+                        "endColumn": 44,
+                        "endOffset": 2241
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1279,
+                    "endColumn": 44,
+                    "endOffset": 1319
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1324,
+                    "endColumn": 54,
+                    "endOffset": 1374
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1379,
+                    "endColumn": 42,
+                    "endOffset": 1417
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 1422,
+                    "endColumn": 51,
+                    "endOffset": 1469
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 1474,
+                    "endColumn": 47,
+                    "endOffset": 1517
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 1522,
+                    "endColumn": 43,
+                    "endOffset": 1561
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 2404,
+                        "endColumn": 43,
+                        "endOffset": 2443
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 1566,
+                    "endColumn": 43,
+                    "endOffset": 1605
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 4,
+                        "startOffset": 2449,
+                        "endColumn": 43,
+                        "endOffset": 2488
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 1610,
+                    "endColumn": 43,
+                    "endOffset": 1649
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 2494,
+                        "endColumn": 43,
+                        "endOffset": 2533
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 1654,
+                    "endColumn": 68,
+                    "endOffset": 1718
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 1723,
+                    "endColumn": 53,
+                    "endOffset": 1772
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 1777,
+                    "endColumn": 51,
+                    "endOffset": 1824
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 1829,
+                    "endColumn": 50,
+                    "endOffset": 1875
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 1880,
+                    "endColumn": 52,
+                    "endOffset": 1928
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 1933,
+                    "endColumn": 45,
+                    "endOffset": 1974
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 1979,
+                    "endColumn": 49,
+                    "endOffset": 2024
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 2029,
+                    "endColumn": 49,
+                    "endOffset": 2074
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 2079,
+                    "endColumn": 56,
+                    "endOffset": 2131
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 2136,
+                    "endColumn": 50,
+                    "endOffset": 2182
+                },
+                "from": {
+                    "file": "C:\\Users\\Panda\\AndroidStudioProjects\\NotePad1\\NotePad\\app\\src\\main\\res\\values\\strings.xml"
                 }
             }
         ]
