@@ -13,7 +13,8 @@
 ## 代码及截图
 ### 主界面及时间戳
 ![image](https://github.com/Magicpanda-orz/NotePad2/blob/master/image/menu.PNG)
-
+### 搜索功能（根据标题搜索）
+![image](https://github.com/Magicpanda-orz/NotePad2/blob/master/image/.PNG)
 ### UI美化
 ![image](https://github.com/Magicpanda-orz/NotePad2/blob/master/image/menu.PNG)
 ### 更改记事本的背景
