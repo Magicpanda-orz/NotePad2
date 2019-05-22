@@ -81,6 +81,183 @@ SimpleCursorAdapter adapter
       );
 ```
 ### 笔记查询功能（根据标题查询）
+#### 在list_options_menu.xml中新建一个查询的按钮
+```
+<item
+    android:id="@+id/menu_search"
+    android:icon="@drawable/search"
+    android:title="@string/menu_search"
+    android:showAsAction="always"
+    />
+```
+#### 在onOptionsItemSelected的switch (item.getItemId())中添加对应menu_search的case：
+```
+case R.id.menu_search:
+    startActivity(new Intent(Intent.ACTION_SEARCH,getIntent().getData()));
+    return true;
+```
+
+#### 在layout中新建布局文件note_search.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="请输入要搜索的内容..."
+        android:iconifiedByDefault="false"
+        android:layout_alignParentTop="true">
+    </SearchView>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>
+```
+#### 创建一个NoteSearch.java
+```
+public class NoteSearch extends Activity implements SearchView.OnQueryTextListener {//extends ListActivity
+
+    private ListView listView=null;
+    private static final String[] PROJECTION = new String[]{
+            NotePad.Notes._ID,//0
+            NotePad.Notes.COLUMN_NAME_TITLE,
+            NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,//显示修改的时间
+            NotePad.Notes.COLUMN_NAME_BACK_COLOR
+
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+
+        // The user does not need to hold down the key to use menu shortcuts.
+        setContentView(R.layout.note_search);
+        listView=(ListView)findViewById(R.id.list);
+
+        Intent intent = getIntent();// Gets the intent that started this Activity.
+        // If there is no data associated with the Intent, sets the data to the default URI, which
+        // accesses a list of notes.
+        if (intent.getData()==null){
+            intent.setData(NotePad.Notes.CONTENT_URI);
+        }
+
+        listView.setOnCreateContextMenuListener(this);
+        SearchView mSearchView = (SearchView)findViewById(R.id.search_view);//注册监听器
+        //mSearchView.setOnQueryTextListener(NoteSearch.this);
+        mSearchView.setIconifiedByDefault(false); //显示搜索的天幕，默认只有一个放大镜图标
+        mSearchView.setSubmitButtonEnabled(true); //显示搜索按钮
+        mSearchView.setBackgroundColor(getResources().getColor(R.color.blue_green)); //设置背景颜色
+        mSearchView.setOnQueryTextListener(this);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) { //Test改变的时候执行的内容
+        //Text发生改变时执行的内容
+        String selection = NotePad.Notes.COLUMN_NAME_TITLE + " Like ? ";//查询条件
+        String[] selectionArgs = { "%"+s+"%" };//查询条件参数，配合selection参数使用,%通配多个字符
+
+        //查询数据库中的内容,当我们使用 SQLiteDatabase.query()方法时，就会得到Cursor对象， Cursor所指向的就是每一条数据。
+        //managedQuery(Uri, String[], String, String[], String)等同于Context.getContentResolver().query()
+        Cursor cursor = managedQuery(
+                getIntent().getData(),            // Use the default content URI for the provider.用于ContentProvider查询的URI，从这个URI获取数据
+                PROJECTION,                       // Return the note ID and title for each note. and modifcation date.用于标识uri中有哪些columns需要包含在返回的Cursor对象中
+                selection,                        // 作为查询的过滤参数，也就是过滤出符合selection的数据，类似于SQL的Where语句之后的条件选择
+                selectionArgs,                    // 查询条件参数，配合selection参数使用
+                NotePad.Notes.DEFAULT_SORT_ORDER  // Use the default sort order.查询结果的排序方式，按照某个columns来排序，例：String sortOrder = NotePad.Notes.COLUMN_NAME_TITLE
+        );
+
+        //一个简单的适配器，将游标中的数据映射到布局文件中的TextView控件或者ImageView控件中
+        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE };
+        int[] viewIDs = { android.R.id.text1 , R.id.text2 };
+        MyCursorAdapter adapter = new MyCursorAdapter(
+                this,                   //context:上下文
+                R.layout.noteslist_item,         //layout:布局文件，至少有int[]的所有视图
+                cursor,                          //cursor：游标
+                dataColumns,                     //from：绑定到视图的数据
+                viewIDs                          //to:用来展示from数组中数据的视图
+                //flags：用来确定适配器行为的标志，Android3.0之后淘汰
+        );
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                // Constructs a new URI from the incoming URI and the row ID
+                Uri uri = ContentUris.withAppendedId(getIntent().getData(), id);
+
+                // Gets the action from the incoming Intent
+                String action = getIntent().getAction();
+
+                // Handles requests for note data
+                if (Intent.ACTION_PICK.equals(action) || Intent.ACTION_GET_CONTENT.equals(action)) {
+
+                    // Sets the result to return to the component that called this Activity. The
+                    // result contains the new URI
+                    setResult(RESULT_OK, new Intent().setData(uri));
+                } else {
+
+                    // Sends out an Intent to start an Activity that can handle ACTION_EDIT. The
+                    // Intent's data is the note ID URI. The effect is to call NoteEdit.
+                    startActivity(new Intent(Intent.ACTION_EDIT, uri));
+                }
+            }
+        });
+        return true;
+    }
+
+//    @Override
+//    protected void onListItemClick(ListView l, View v, int position, long id) {
+//
+//        // Constructs a new URI from the incoming URI and the row ID
+//        Uri uri = ContentUris.withAppendedId(getIntent().getData(), id);
+//
+//        // Gets the action from the incoming Intent
+//        String action = getIntent().getAction();
+//
+//        // Handles requests for note data
+//        if (Intent.ACTION_PICK.equals(action) || Intent.ACTION_GET_CONTENT.equals(action)) {
+//
+//            // Sets the result to return to the component that called this Activity. The
+//            // result contains the new URI
+//            setResult(RESULT_OK, new Intent().setData(uri));
+//        } else {
+//
+//            // Sends out an Intent to start an Activity that can handle ACTION_EDIT. The
+//            // Intent's data is the note ID URI. The effect is to call NoteEdit.
+//            startActivity(new Intent(Intent.ACTION_EDIT, uri));
+//        }
+//    }
+}
+```
+#### 在AndroidManifest.xml中注入
+```
+<activity
+    android:name=".NoteSearch"
+    android:label="NoteSearch"
+    >
+
+    <intent-filter>
+        <action android:name="android.intent.action.NoteSearch" />
+        <action android:name="android.intent.action.SEARCH" />
+        <action android:name="android.intent.action.SEARCH_LONG_PRESS" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="vnd.android.cursor.dir/vnd.google.note" />
+        <!--1.vnd.android.cursor.dir代表返回结果为多列数据-->
+        <!--2.vnd.android.cursor.item 代表返回结果为单列数据-->
+    </intent-filter>
+</activity>
+```
 
 ### UI美化、修改背景颜色
 #### 在AndroidManifest.xml中NotesList的Activity中添加：
