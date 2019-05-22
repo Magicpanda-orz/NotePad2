@@ -11,7 +11,7 @@
  笔记排序  
 
 ## 代码及截图
-### 主界面
+### 主界面及时间戳
 ![image](https://github.com/Magicpanda-orz/NotePad2/blob/master/image/menu.PNG)
 
 ### UI美化
@@ -32,6 +32,56 @@
 ![image](https://github.com/Magicpanda-orz/NotePad2/blob/master/image/sort_createtime.PNG) 
 
 ### 主要代码：
+### 显示时间戳
+#### 在NotePadProvider中修改insert():
+```
+Date date = new Date(now);
+SimpleDateFormat format = new SimpleDateFormat("yy.MM.dd HH:mm:ss");
+String dateTime = format.format(date);
+```
+#### 在notelist_item.xml中添加一个显示时间的TextView
+```
+<TextView
+android:id="@+id/text2"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textAppearance="?android:attr/textAppearanceLarge"
+android:textSize="20sp"
+    />
+```
+#### 在NotesList的数据定义中增加修改时间
+```
+private static final String[] PROJECTION = new String[] {
+            NotePad.Notes._ID, // 0
+            NotePad.Notes.COLUMN_NAME_TITLE, // 1
+            NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,//显示修改时间
+            NotePad.Notes.COLUMN_NAME_BACK_COLOR,//扩展显示颜色
+            //NotePad.Notes.COLUMN_NAME_TEXT_COLOR,//字体颜色
+    };
+```
+#### 装配的时候需要装配相应的日期，在dataColumns,viewIDs这两个参数需要加入时间
+```
+String[] dataColumns = {
+        NotePad.Notes.COLUMN_NAME_TITLE,
+        NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE
+} ;
+```
+```
+int[] viewIDs = { android.R.id.text1 ,R.id.text2};
+```
+#### 最后通过SimpleCursorAdapter来进行装配
+```
+SimpleCursorAdapter adapter
+    = new SimpleCursorAdapter(
+              this,                            
+              R.layout.noteslist_item,          
+              cursor,                           
+              dataColumns,
+              viewIDs
+      );
+```
+### 笔记查询功能（根据标题查询）
+
 ### UI美化、修改背景颜色
 #### 在AndroidManifest.xml中NotesList的Activity中添加：
 ```
